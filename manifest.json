@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Path of Exile 2 Trade Extension - Alpha",
+  "short_name": "PoE2TradeExt",
+  "author": "Jonathan Kocher (SkiperTheBoss)",
+  "version_name": "0.11-alpha",
+  "version": "0.11",
+  "description": "Adds currently a button for automatically import items into the page.",
+  "permissions": ["scripting", "activeTab", "clipboardRead"],
+  "host_permissions": ["https://www.pathofexile.com/trade2/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.pathofexile.com/trade2/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["settings.css", "settings.html", "modifiers.json", "itemCategory.json", "mapChatItems.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

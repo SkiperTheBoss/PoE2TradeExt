@@ -1,0 +1,35 @@
+Item Class: Helmets
+Rarity: Unique
+Erian's Cobble
+Guarded Helm
+--------
+Armour: 46 (augmented)
+Evasion Rating: 43 (augmented)
+Energy Shield: 3 (augmented)
+--------
+Requirements:
+Level: 11
+Str: 13
+Dex: 13
+--------
+Sockets: S 
+--------
+Item Level: 66
+--------
++12 to Armour
++15 to Evasion Rating
++3 to maximum Energy Shield
++19 to Accuracy Rating
++6 to maximum Life
++5 to maximum Mana
+7% increased Rarity of Items found
+15% increased Critical Hit Chance
++5 to Dexterity
++2 to Intelligence
++2% to Fire Resistance
++4% to Cold Resistance
++5% to Lightning Resistance
+2.8 Life Regeneration per second
+--------
+Sometimes patching up your
+equipment gets out of hand.

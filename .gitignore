@@ -1,0 +1,7 @@
+# Specify filepatterns you want git to ignore.
+
+.stfolder
+background.js
+*.sync-conflict-*
+PathOfExile2TradeExtensionExample.gif
+Video.avi

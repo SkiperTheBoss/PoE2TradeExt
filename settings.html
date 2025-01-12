@@ -1,0 +1,128 @@
+<div id="extension-settings-modal" style="display:none;">
+    <div id="extension-settings-overlay"></div>
+    <div id="extension-settings-content">
+        <div id="modal-header">
+            <h1>Extension Settings</h1>
+            <button id="close-button" title="Close">✖</button>
+        </div>
+        <div id="modal-body">
+            <div>
+                <h4>Set Type Filters automatically</h4>
+                <div>
+                    <input class="toggle-btn" type="checkbox" id="filter-item-category" />
+                    <label for="filter-item-category">Item Category</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-item-rarity" />
+                    <label for="filter-item-rarity">Item Rarity</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-item-level" />
+                    <label for="filter-item-level">Item Level</label>
+                    <div class="toggle-options" id="toggle-item-level">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-item-quality" />
+                    <label for="filter-item-quality">Item Quality</label>
+                    <div class="toggle-options" id="toggle-item-quality">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Set Equipment Filters automatically</h4>
+                <div>
+                    <input type="checkbox" id="filter-equipment-block" />
+                    <label for="filter-equipment-block">Block</label>
+                    <div class="toggle-options" id="toggle-equipment-block">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Set Requirements automatically</h4>
+                <div>
+                    <input type="checkbox" id="filter-requirements-level" />
+                    <label for="filter-requirements-level">Level</label>
+                    <div class="toggle-options" id="toggle-requirements-level">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-requirements-str" />
+                    <label for="filter-requirements-str">Strength</label>
+                    <div class="toggle-options" id="toggle-requirements-str">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-requirements-dex" />
+                    <label for="filter-requirements-dex">Dexterity</label>
+                    <div class="toggle-options" id="toggle-requirements-dex">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="filter-requirements-int" />
+                    <label for="filter-requirements-int">Intelligence</label>
+                    <div class="toggle-options" id="toggle-requirements-int">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>Set Trade Filters automatically</h4>
+                <input type="checkbox" id="auto-seller" />
+                <label for="auto-seller">Set Seller Account automatically</label>
+                <input type="text" id="seller-account" class="form-control text" placeholder="Enter account name..." disabled />
+            </div>
+            <div>
+                <h4>Set Stat Filters automatically</h4>
+                <div>
+                    <input type="checkbox" id="filter-stat-default" />
+                    <label for="filter-stat-default">Stat</label>
+                    <div class="toggle-options" id="toggle-stat-default">
+                        <span data-value="min" class="option active">Min</span>
+                        <span data-value="minmax" class="option">Min/Max</span>
+                        <span data-value="max" class="option">Max</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>More Settings</h4>
+                <div>
+                    <input type="checkbox" id="search-extension" />
+                    <label for="search-extension">Search automatically</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="extensionDebugMode" />
+                    <label for="extensionDebugMode">Debug</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="alphaFeatures" />
+                    <label for="alphaFeatures">Alpha Features</label>
+                </div>
+            </div>
+        </div>
+        <div id="modal-footer">
+            <button id="save-button">Save</button>
+            <button id="cancel-button">Cancel</button>
+        </div>
+    </div>
+</div>

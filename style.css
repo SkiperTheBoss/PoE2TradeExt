@@ -1,0 +1,17 @@
+.search-bar {
+    display: flex;
+    align-items: center; /* Zentriert die Elemente vertikal */
+    justify-content: space-between; /* Vermeidet Überlappungen */
+    gap: 10px; /* Fügt einen Abstand zwischen den Elementen hinzu */
+}
+
+.search-left,
+.search-right {
+    flex: 1; /* Teilt den Platz gleichmäßig auf */
+    max-width: 40%; /* Begrenzt die maximale Breite */
+}
+
+#custom-button-container {
+    flex-shrink: 0; /* Verhindert, dass der Button kleiner wird */
+    margin: 0 10px; /* Fügt seitliche Abstände hinzu */
+}

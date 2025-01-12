@@ -1,0 +1,611 @@
+{
+    "#% increased Physical Damage":
+    {},
+    "Adds # to # Lightning Damage":
+    {},
+    "# to Accuracy Rating":
+    {
+        "optionIndex":
+        {
+            "Bow": 2,
+            "Crossbow": 2,
+            "One-Handed Mace": 2,
+            "Two-Handed Mace": 2,
+            "Any Two-Handed Melee Weapon": 2,
+            "default": 1
+        }
+    },
+    "#% increased Attribute Requirements":
+    {},
+    "#% reduced Attribute Requirements":
+    {
+        "mapped": "#% increased Attribute Requirements"
+    },
+    "Gain # Life per Enemy Killed":
+    {},
+    "Gain # Mana per Enemy Killed":
+    {},
+    "#% increased Stun Duration":
+    {},
+    "#% increased bonuses gained from Equipped Quiver":
+    {},
+    "#% increased Totem Damage":
+    {},
+    "#% increased Totem Life":
+    {},
+    "#% increased amount of Life Leeched":
+    {},
+    "Bow Attacks fire an additional Arrow (implicit)":
+    {
+        "mapped": "Bow Attacks fire # additional Arrows",
+        "additional": "implicit"
+    },
+    "Adds # to # Cold damage to Attacks":
+    {},
+    "# to Evasion Rating":
+    {
+        "optionIndex":
+        {
+            "Bow": 2,
+            "Crossbow": 2,
+            "default": 1
+        }
+    },
+    "#% increased Spell Damage":
+    {},
+    "#% increased Chaos Damage":
+    {},
+    "# to maximum Mana":
+    {},
+    "#% increased Cast Speed":
+    {},
+    "# to Armour":
+    {
+        "optionIndex":
+        {
+            "Belt": 2,
+            "Bow": 2,
+            "Crossbow": 2,
+            "default": 1
+        }
+    },
+    "# to Armour (implicit)":
+    {
+        "mapped": "# to Armour",
+        "additional": "implicit"
+    },
+    "#% increased Flask Mana Recovery rate":
+    {},
+    "# Life Regeneration per second":
+    {},
+    "#% increased Charm Charges gained":
+    {},
+    "#% reduced Charm Charges used":
+    {},
+    "Charm Slots: # (augmented)":
+    {
+        "mapped": "# Charm Slot",
+        "triggerAbove": 1,
+        "adjustValue": -1
+    },
+    "#% increased Flask Charges gained (implicit)":
+    {
+        "mapped": "#% increased Flask Charges gained",
+        "additional": "implicit"
+    },
+    "# to Strength":
+    {},
+    "# to Stun Threshold":
+    {},
+    "Causes Double Stun Buildup":
+    {},
+    "Adds # to # Physical Damage":
+    {},
+    "Adds # to # Fire Damage":
+    {},
+    "Hits Break # Armour":
+    {},
+    "Apply Fire Exposure when fully breaking enemy Armour":
+    {},
+    "#% increased Melee Damage":
+    {},
+    "#% increased Warcry Cooldown Recovery Rate":
+    {},
+    "#% chance to inflict Bleeding on Hit":
+    {},
+    "#% increased Weapon Swap Speed":
+    {},
+    "#% increased Life Recovery from Flasks":
+    {},
+    "#% chance to Poison on Hit":
+    {},
+    "#% increased Damage with Crossbows":
+    {},
+    "#% increased Magnitude of Poison you inflict":
+    {},
+    "#% increased Attack Damage":
+    {},
+    "#% increased Elemental Damage":
+    {},
+    "#% increased Totem Placement speed":
+    {},
+    "Minions have #% additional Physical Damage Reduction":
+    {},
+    "#% increased Stun Threshold":
+    {},
+    "#% increased Area of Effect":
+    {},
+    "#% increased Damage with Warcries":
+    {},
+    "#% increased Damage with Maces":
+    {},
+    "#% increased Defences from Equipped Shield":
+    {},
+    "#% increased Warcry Speed":
+    {},
+    "Minions have #% increased maximum Life":
+    {},
+    "#% increased Knockback Distance":
+    {},
+    "Gain # Rage when Hit by an Enemy":
+    {},
+    "#% increased Magnitude of Ignite you inflict":
+    {},
+    "#% increased Armour":
+    {
+        "optionIndex":
+        {
+            "Bow": 2,
+            "Crossbow": 2,
+            "default": 1
+        }
+    },
+    "#% increased Global Physical Damage":
+    {},
+    "#% increased Life Regeneration rate":
+    {},
+    "#% increased Stun Buildup":
+    {},
+    "Empowered Attacks deal #% increased Damage":
+    {},
+    "#% increased Fire Damage":
+    {},
+    "#% increased Thorns damage":
+    {},
+    "Damage Penetrates #% Fire Resistance":
+    {},
+    "#% increased Armour Break Duration":
+    {},
+    "#% increased chance to Ignite":
+    {},
+    "#% increased Damage against Enemies with Fully Broken Armour":
+    {},
+    "#% increased Magnitude of Bleeding you inflict":
+    {},
+    "#% increased Block chance":
+    {
+        "optionIndex":
+        {
+            "Bow": 2,
+            "Crossbow": 2,
+            "default": 1
+        }
+    },
+    "Gain # Rage on Melee Hit":
+    {},
+    "#% increased Flask Charges gained":
+    {},
+    "#% increased Charm Effect Duration":
+    {},
+    "#% increased Attack Speed with Bows":
+    {},
+    "#% increased Effect of your Mark Skills":
+    {},
+    "#% increased Magnitude of Ailments you inflict":
+    {},
+    "#% increased Attack Speed":
+    {},
+    "#% increased Attack Speed with Quarterstaves":
+    {},
+    "#% increased Projectile Damage":
+    {},
+    "#% increased Projectile Speed":
+    {},
+    "#% increased Critical Damage Bonus for Attack Damage":
+    {},
+    "#% increased amount of Mana Leeched":
+    {},
+    "#% increased Stun Threshold if you haven't been Stunned Recently":
+    {},
+    "#% increased Lightning Damage":
+    {},
+    "#% increased Mana Recovery from Flasks":
+    {},
+    "#% increased Evasion Rating":
+    {
+        "optionIndex":
+        {
+            "Bow": 2,
+            "Crossbow": 2,
+            "default": 1
+        }
+    },
+    "#% increased chance to Shock":
+    {},
+    "#% increased Damage with Quarterstaves":
+    {},
+    "#% increased Accuracy Rating":
+    {},
+    "#% increased Damage with Hits against Rare and Unique Enemies":
+    {},
+    "#% increased Duration of Damaging Ailments on Enemies":
+    {},
+    "Damage Penetrates #% Lightning Resistance":
+    {},
+    "#% increased Pin Buildup":
+    {},
+    "#% increased Flask Effect Duration":
+    {},
+    "#% increased Magnitude of Damaging Ailments you inflict with Critical Hits":
+    {},
+    "#% increased Duration of Ignite, Shock and Chill on Enemies":
+    {},
+    "Minions have #% increased Critical Hit Chance":
+    {},
+    "Minions have #% increased Critical Damage Bonus":
+    {},
+    "#% increased Cold Damage":
+    {},
+    "#% increased Critical Hit Chance":
+    {},
+    "Minions deal #% increased Damage":
+    {},
+    "#% increased Energy Shield Recharge Rate":
+    {},
+    "#% faster start of Energy Shield Recharge":
+    {},
+    "Damage Penetrates #% Cold Resistance":
+    {},
+    "Gain #% of maximum Energy Shield as additional Stun Threshold":
+    {},
+    "#% to Maximum Cold Resistance":
+    {},
+    "#% increased Curse Duration":
+    {},
+    "#% increased Critical Damage Bonus":
+    {},
+    "Offerings have #% increased Maximum Life":
+    {},
+    "Recover #% of Life on Kill":
+    {},
+    "#% increased Critical Spell Damage Bonus":
+    {},
+    "#% increased Shock Duration":
+    {},
+    "Meta Skills gain #% increased Energy":
+    {},
+    "#% increased Minion Accuracy Rating":
+    {},
+    "#% increased Freeze Buildup":
+    {},
+    "#% increased Freeze Threshold":
+    {},
+    "Debuffs on you expire #% faster":
+    {},
+    "#% of Damage taken Recouped as Life":
+    {},
+    "Recover #% of Mana on Kill":
+    {},
+    "#% increased Energy Shield":
+    {},
+    "# to Intelligence":
+    {},
+    "#% slower start of Energy Shield Recharge":
+    {},
+    "Energy Shield Recharge is not interrupted by Damage if Recharge began Recently":
+    {},
+    "#% increased Slowing Potency of Debuffs on You":
+    {
+        "additionalByItem":
+        {
+            "Relic": "sanctum",
+            "default": null
+        }
+    },
+    "#% reduced Slowing Potency of Debuffs on You":
+    {
+        "mapped": "#% increased Slowing Potency of Debuffs on You",
+        "additionalByItem":
+        {
+            "Relic": "sanctum",
+            "default": null
+        }
+    },
+    "#% increased maximum Life":
+    {
+        "additionalByItem":
+        {
+            "Relic": "sanctum",
+            "default": null
+        }
+    },
+    "#% increased maximum Life (rune)":
+    {
+        "mapped": "#% increased maximum Life",
+        "additional": "rune"
+    },
+    "# to maximum Life":
+    {},
+    "#% to Cold Resistance":
+    {},
+    "#% to Lightning Resistance":
+    {},
+    "#% to Chaos Resistance":
+    {},
+    "Permanently Intimidate enemies on Block":
+    {},
+    "# to Dexterity":
+    {},
+    "Leeches #% of Physical Damage as Life":
+    {},
+    "#% to Maximum Fire Resistance":
+    {},
+    "#% to Fire Resistance":
+    {},
+    "#% to Fire Resistance while on Low Life":
+    {},
+    "Regenerate #% of Life per second":
+    {},
+    "Regenerate #% of Life per second while on Low Life":
+    {},
+    "#% increased Gold found in this Area":
+    {},
+    "Causes Bleeding on Hit":
+    {},
+    "# to # Physical Thorns damage":
+    {},
+    "#% increased Elemental Damage with Attacks":
+    {},
+    "Leeches #% of Physical Damage as Mana":
+    {},
+    "Projectiles Pierce all Ignited enemies":
+    {},
+    "Attacks Gain #% of Damage as Extra Fire Damage":
+    {},
+    "Adds # to # Physical Damage to Attacks":
+    {},
+    "#% increased Damage with Bow Skills":
+    {},
+    "#% increased Critical Hit Chance for Attacks":
+    {},
+    "#% chance to Pierce an Enemy":
+    {},
+    "# to maximum Energy Shield":
+    {},
+    "#% increased Critical Hit Chance for Spells":
+    {},
+    "#% increased Mana Regeneration Rate":
+    {},
+    "#% increased Mana Regeneration Rate (rune)":
+    {
+        "mapped": "#% increased Mana Regeneration Rate",
+        "additional": "rune"
+    },
+    "#% increased Mana Regeneration Rate (implicit)":
+    {
+        "mapped": "#% increased Mana Regeneration Rate",
+        "additional": "implicit"
+    },
+    "#% chance for Energy Shield Recharge to start when you Kill an Enemy":
+    {},
+    "#% increased Light Radius":
+    {},
+    "#% increased Rarity of Items found":
+    {},
+    "#% increased Energy Shield from Equipped Focus":
+    {},
+    "Minions have #% increased Attack and Cast Speed":
+    {},
+    "#% increased Magnitude of Shock you inflict":
+    {},
+    "#% increased Effect of Auras from your Skills":
+    {},
+    "Base Critical Hit Chance for Attacks with Weapons is #%":
+    {},
+    "#% increased Flask Charges used":
+    {},
+    "#% reduced Flask Charges used":
+    {},
+    "Life Flasks used while on Low Life apply Recovery Instantly":
+    {},
+    "Mana Flasks used while on Low Mana apply Recovery Instantly":
+    {},
+    "#% increased Evasion and Energy Shield":
+    {},
+    "#% increased Bleeding Duration":
+    {},
+    "#% increased Armour and Evasion":
+    {},
+    "Deal #% increased Damage with Hits to Rare or Unique Enemies for each second they've ever been in your Presence, up to a maximum of 200%":
+    {
+        "replace": [1]
+    },
+    "#% increased Skill Effect Duration":
+    {},
+    "#% increased maximum Energy Shield":
+    {},
+    "Adds # to # Fire damage to Attacks":
+    {},
+    "#% increased Chill Duration on Enemies":
+    {},
+    "#% to all Maximum Elemental Resistances":
+    {},
+    "Take no Extra Damage from Critical Hits":
+    {},
+    "Triggered Spells deal #% increased Spell Damage":
+    {},
+    "Monsters take #% increased Damage":
+    {},
+    "Restore # Honour on picking up a Key":
+    {},
+    "Restore # Honour on room completion":
+    {},
+    "#% chance for each of your Keys to upgrade on completing a Floor":
+    {},
+    "# additional Rooms are revealed on the Trial Map":
+    {},
+    "When you gain a Key #% chance to gain another":
+    {},
+    "#% chance to Avoid gaining an Affliction":
+    {},
+    "#% increased Honour restored":
+    {},
+    "Fountains have #% chance to grant double Sacred Water":
+    {},
+    "Gain # Sacred Water at the start of the Trial":
+    {},
+    "#% to Honour Resistance":
+    {},
+    "#% increased maximum Honour":
+    {},
+    "Rare Monsters take #% increased Damage":
+    {},
+    "Restore # Honour on venerating a Maraketh Shrine":
+    {},
+    "#% increased Movement Speed":
+    {
+        "additionalByItem":
+        {
+            "Relic": "sanctum",
+            "default": null
+        }
+    },
+    "Monsters have #% chance to drop double Sacred Water":
+    {},
+    "#% increased Defences":
+    {},
+    "#% increased quantity of Relics dropped by Monsters":
+    {},
+    "Traps deal #% reduced Damage":
+    {},
+    "#% increased quantity of Keys dropped by Monsters":
+    {},
+    "Hits against you have #% reduced Critical Damage Bonus":
+    {
+        "additionalByItem":
+        {
+            "Relic": "sanctum",
+            "default": null
+        }
+    },
+    "Monsters deal #% reduced Damage":
+    {
+        "mapped": "Monsters deal #% increased Damage"
+    },
+    "Rare Monsters deal #% reduced Damage":
+    {
+        "mapped": "Rare Monsters deal #% increased Damage"
+    },
+    "Bosses take #% increased Damage":
+    {},
+    "Restore # Honour on killing a Boss":
+    {},
+    "An additional Room is revealed on the Trial Map":
+    {},
+    "Adds # to # Cold Damage":
+    {},
+    "Grants # Life per Enemy Hit":
+    {},
+    "#% chance to Blind Enemies on Hit with Attacks":
+    {},
+    "#% increased Damage with Bows":
+    {},
+    "#% to all Elemental Resistances":
+    {},
+    "Your speed is unaffected by Slows":
+    {},
+    "#% increased Flask Life Recovery rate":
+    {},
+    "Causes #% increased Stun Buildup":
+    {},
+    "Always deals Critical Hits against Heavy Stunned Enemies":
+    {},
+    "#% increased Daze Buildup":
+    {},
+    "Physical Damage is Pinning":
+    {},
+    "# to Spirit":
+    {},
+    "# to Spirit (implicit)":
+    {
+        "mapped": "# to Spirit",
+        "additional": "implicit"
+    },
+    "Critical Hits ignore Enemy Monster Elemental Resistances":
+    {},
+    "Causes Daze buildup equal to #% of Damage dealt":
+    {},
+    "#% to Critical Hit Chance":
+    {},
+    "#% reduced Attack Speed":
+    {
+        "mapped": "#% increased Attack Speed"
+    },
+    "Maim on Critical Hit":
+    {},
+    "#% increased chance to inflict Ailments":
+    {},
+    "Gain #% of Damage as Extra Cold Damage":
+    {},
+    "Minions gain #% of their Maximum Life as Extra Maximum Energy Shield":
+    {},
+    "Minions Revive #% faster":
+    {},
+    "Mark Skills have #% increased Cast Speed":
+    {},
+    "#% reduced Ignite Duration on you":
+    {},
+    "Allies in your Presence deal #% increased Damage":
+    {},
+    "Allies in your Presence deal # to # additional Attack Physical Damage":
+    {},
+    "Allies in your Presence deal # to # additional Attack Fire Damage":
+    {},
+    "# additional Rooms are revealed on the Trial Map":
+    {
+        "mapped": "An additional Room is revealed on the Trial Map"
+    },
+    "# to Level of all Spell Skills":
+    {},
+    "# to Strength":
+    {},
+    "Iron Reflexes":
+    {},
+    "#% increased Rarity of Items found when on Low Life":
+    {},
+    "# to Level of all Projectile Skills":
+    {},
+    "#% of Elemental Damage Converted to Cold Damage":
+    {},
+    "#% of Elemental Damage Converted to Fire Damage":
+    {},
+    "#% of Elemental Damage Converted to Lightning Damage":
+    {},
+    "You count as on Full Mana while at #% of maximum Mana or above":
+    {},
+    "#% increased Attack Speed while on Full Mana":
+    {},
+    "#% increased Damage while you have an active Charm":
+    {},
+    "#% to Lightning Resistance (enchant)":
+    {
+        "mapped": "#% to Lightning Resistance",
+        "additional": "enchant"
+    },
+    "No Movement Speed Penalty while Shield is Raised":
+    {},
+    "Gain #% of Damage as Extra Lightning Damage":
+    {},
+    "#% of Spell Mana Cost Converted to Life Cost":
+    {}
+}
