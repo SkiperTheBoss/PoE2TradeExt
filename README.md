@@ -54,7 +54,7 @@ Follow these steps to get started:
 ---
 
 ## 🛠️ Example Item Data
-Here´s an [example item structure](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/main/exampleItem.txt "example item structure") to try out.
+Here´s an [example item structure](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/master/exampleItem.txt "example item structure") to try out.
 
 ---
 
