@@ -69,10 +69,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 ## 🎥 Gif
-![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/main/Screenshots/PathOfExile2TradeExtensionExample.gif)
+![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/master/Screenshots/PathOfExile2TradeExtensionExample.gif)
 
 ##  🖼️ Screenshots
-![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/main/Screenshots/1.png)
-![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/main/Screenshots/2.png)
-![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/main/Screenshots/3.png)
-![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/main/Screenshots/4.png)
+![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/master/Screenshots/1.png)
+![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/master/Screenshots/2.png)
+![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/master/Screenshots/3.png)
+![](https://raw.githubusercontent.com/SkiperTheBoss/PoE2TradeExt/refs/heads/master/Screenshots/4.png)
