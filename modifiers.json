@@ -607,5 +607,52 @@
     "Gain #% of Damage as Extra Lightning Damage":
     {},
     "#% of Spell Mana Cost Converted to Life Cost":
+    {},
+    "#% increased Stun Threshold (implicit)":
+    {
+        "mapped": "#% increased Stun Threshold",
+        "additional": "implicit"
+    },
+    "#% of Damage taken bypasses Energy Shield":
+    {},
+    "Gain #% of Maximum Life as Extra Maximum Energy Shield":
+    {},
+    "#% to Thorns Critical Hit Chance":
+    {},
+    "# Physical damage taken from Projectile Attacks":
+    {},
+    "#% to Block chance":
+    {},
+    "#% reduced Chill Duration on you":
+    {},
+    "#% reduced Freeze Duration on you":
+    {},
+    "#% reduced Shock duration on you":
+    {},
+    "#% increased Stun Recovery":
+    {},
+    "All Damage from Hits with this Weapon Contributes to Freeze Buildup":
+    {},
+    "Culling Strike against Frozen Enemies":
+    {},
+    "#% of Melee Physical Damage taken reflected to Attacker": 
+    {},
+    "You have no Life Regeneration":
+    {},
+    "#% reduced Intelligence":
+    {
+        "mapped": "#% increased Intelligence"
+    },
+    "#% reduced Dexterity":
+    {
+        "mapped": "#% increased Dexterity"
+    },
+    "#% increased Strength":
+    {},
+    "Gain # Rage when Critically Hit by an Enemy":
+    {},
+    "Freeze as though dealing Cold damage equal to #% of your maximum Mana when Hit":
+    {},
+    "Trigger Ember Fusillade Skill on casting a Spell":
     {}
 }
