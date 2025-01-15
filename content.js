@@ -1,5 +1,6 @@
 let debug = getExtensionSettings().debug || false;
 let importButton;
+let update;
 const originalLog = console.log;
 
 console.log = function(...args) {
@@ -38,15 +39,7 @@ async function initializeSearchButton() {
             importButton = document.createElement('button');
             elements.importButton = importButton;
             importButton.textContent = 'Import from Clipboard';
-            importButton.style.fontFamily = 'inherit';
-            importButton.style.fontSize = '13px';
-            importButton.style.height = '34px';
-            importButton.style.padding = '5px 10px';
-            importButton.style.backgroundColor = '#0f304d';
-            importButton.style.color = '#e2e2e2';
-            importButton.style.border = '1px solid #4c4c7d';
-            importButton.style.cursor = 'pointer';
-            importButton.disabled = true;
+            importButton.classList.add('import-button');
 
             // Eventlistener für den Import-Button
             importButton.addEventListener('click', async () => {
@@ -551,36 +544,48 @@ async function loadJSON(filePath) {
     }
 }
 
+// Funktion zum Laden aus localStorage oder Standard-JSON-Datei
+async function loadFromStorageOrDefault(fileName, filePath) {
+    const storedContent = localStorage.getItem(fileName);
+    if (storedContent) {
+        console.log(`${fileName} loaded from localStorage.`);
+        return JSON.parse(storedContent); // Parse gespeicherte Inhalte
+    } else {
+        console.log(`${fileName} not found in localStorage. Loading default.`);
+        return await loadJSON(filePath); // Fallback auf lokale Datei
+    }
+}
+
 // Initialisierung der Modifiers
 async function initializeModifiers() {
-    const data = await loadJSON('modifiers.json');
+    const data = await loadFromStorageOrDefault("modifiers.json", "modifiers.json");
     if (data) {
-        console.log('Modifiers initialized');
+        console.log("Modifiers initialized");
         return data;
     } else {
-        throw new Error('Failed to initialize modifiers');
+        throw new Error("Failed to initialize modifiers");
     }
 }
 
 // Initialisierung der itemCategory
 async function initializeItemCategory() {
-    const data = await loadJSON('itemCategory.json');
+    const data = await loadFromStorageOrDefault("itemCategory.json", "itemCategory.json");
     if (data) {
-        console.log('itemCategory initialized');
+        console.log("itemCategory initialized");
         return data;
     } else {
-        throw new Error('Failed to initialize itemCategory');
+        throw new Error("Failed to initialize itemCategory");
     }
 }
 
 // Initialisierung der mapChatItems
 async function initializeMapChatItems() {
-    const data = await loadJSON('mapChatItems.json');
+    const data = await loadFromStorageOrDefault("mapChatItems.json", "mapChatItems.json");
     if (data) {
-        console.log('mapChatItems initialized');
+        console.log("mapChatItems initialized");
         return data;
     } else {
-        throw new Error('Failed to initialize mapChatItems');
+        throw new Error("Failed to initialize mapChatItems");
     }
 }
 
@@ -590,13 +595,14 @@ async function initializeMapChatItems() {
         modifiers = await initializeModifiers();
         itemCategory = await initializeItemCategory();
         mapChatItems = await initializeMapChatItems();
-        console.log('Files are ready to use.');
+        console.log("Files are ready to use.");
 
         initializeApp(); // Starte den Rest des Codes
     } catch (error) {
-        console.error('Initialization failed:', error.message);
+        console.error("Initialization failed:", error.message);
     }
 })();
+
 
 /*
   Tablet:
@@ -838,7 +844,7 @@ async function setInputValue(inputElement, value) {
     }
 }
 
-function initializeExtensionSettingsButton() {
+async function initializeExtensionSettingsButton() {
     const navTabs = document.querySelector('.nav.nav-tabs.account');
     if (!navTabs) {
         console.error('Navigation tabs not found.');
@@ -867,13 +873,18 @@ function initializeExtensionSettingsButton() {
 
     loadSettingsModal();
 
-    newTab.addEventListener('click', () => {
+    newTab.addEventListener('click', async () => {
         const modal = document.getElementById('extension-settings-modal');
         const overlay = document.getElementById('extension-settings-overlay');
         if (modal && overlay) {
             const isVisible = modal.style.display === 'block';
             modal.style.display = isVisible ? 'none' : 'block';
             overlay.style.display = isVisible ? 'none' : 'block';
+
+            if (!update) {
+              update = true;
+              await initializeUpdate();
+            }
         } else {
             console.error('Modal or overlay not found.');
         }
@@ -1539,6 +1550,137 @@ async function initializeAddEventListeners() {
     }
 }
 
+async function initializeUpdate() {
+    const tabs = document.querySelectorAll("#tabs .tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    // Tab Switching
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const targetTab = tab.getAttribute("data-tab");
+
+            tabs.forEach((t) => t.classList.remove("active"));
+            tabContents.forEach((content) => content.classList.remove("active"));
+
+            tab.classList.add("active");
+            document.getElementById(targetTab).classList.add("active");
+        });
+    });
+
+    // Sub-Tabs Switching
+    const subTabs = document.querySelectorAll(".sub-tabs .sub-tab");
+    const subTabContents = document.querySelectorAll(".sub-tab-content");
+
+    subTabs.forEach((subTab) => {
+        subTab.addEventListener("click", () => {
+            const targetSubTab = subTab.getAttribute("data-sub-tab");
+
+            subTabs.forEach((tab) => tab.classList.remove("active"));
+            subTabContents.forEach((content) => content.classList.remove("active"));
+
+            subTab.classList.add("active");
+            document.getElementById(targetSubTab).classList.add("active");
+        });
+    });
+
+    const updateItems = [
+        { name: "modifiers.json", path: "modifiers.json", lastUpdateTime: 0 },
+        { name: "itemCategory.json", path: "itemCategory.json", lastUpdateTime: 0 },
+        { name: "mapChatItems.json", path: "mapChatItems.json", lastUpdateTime: 0 }
+    ];
+
+    const repoOwner = "SkiperTheBoss";
+    const repoName = "PoE2TradeExt";
+    const branch = "master";
+    const RATE_LIMIT_DELAY = 1000 * 60; // 1 Minute Mindestabstand pro Update
+
+    for (const item of updateItems) {
+        const localDate = localStorage.getItem(`${item.name}-lastUpdated`);
+        const parent = document.querySelector(`.update-item[data-name="${item.name}"]`);
+        const dateElement = parent.querySelector(".update-date");
+        const updateButton = parent.querySelector(".update-button");
+
+        // Zeige gespeichertes Datum an, falls vorhanden
+        dateElement.textContent = localDate ? `Last updated: ${new Date(localDate).toLocaleString()}` : "Last updated: N/A";
+
+        updateButton.addEventListener("click", async () => {
+            const now = Date.now();
+            if (now - item.lastUpdateTime < RATE_LIMIT_DELAY) {
+                alert("Please wait a minute before trying to update this item again.");
+                return;
+            }
+
+            item.lastUpdateTime = now;
+            console.log(`Checking for updates for ${item.name}...`);
+
+            // Button deaktivieren und Indikator hinzufügen
+            updateButton.disabled = true;
+            dateElement.innerHTML = "<span class='loading-indicator'>Updating...</span>";
+
+            try {
+                // GitHub API URL für Datei-Metadaten
+                const fileApiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${item.path}?ref=${branch}`;
+                const fileResponse = await fetch(fileApiUrl);
+
+                if (!fileResponse.ok) {
+                    throw new Error(`GitHub API request failed for ${item.name}`);
+                }
+
+                const fileData = await fileResponse.json();
+
+                // GitHub API URL für Commit-Informationen
+                const commitsApiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${item.path}&sha=${branch}`;
+                const commitsResponse = await fetch(commitsApiUrl);
+
+                if (!commitsResponse.ok) {
+                    throw new Error(`Failed to fetch commit info for ${item.name}`);
+                }
+
+                const commitsData = await commitsResponse.json();
+                const latestCommitDate = new Date(commitsData[0].commit.author.date);
+
+                const localTimestamp = localDate ? new Date(localDate).getTime() : 0;
+                const githubTimestamp = latestCommitDate.getTime();
+
+                if (githubTimestamp > localTimestamp) {
+                    console.log(`Updating ${item.name}...`);
+
+                    // Fetch the new content
+                    const contentResponse = await fetch(fileData.download_url);
+                    const content = await contentResponse.text();
+
+                    // Save content and update the last modified date
+                    localStorage.setItem(`${item.name}`, content);
+                    localStorage.setItem(`${item.name}-lastUpdated`, latestCommitDate.toISOString());
+
+                    // Update the display
+                    dateElement.textContent = `Last updated: ${latestCommitDate.toLocaleString()}`;
+                    alert(`${item.name} has been updated!`);
+
+                    // Aktualisiere globale Variablen
+                    if (item.name === "modifiers.json") {
+                        modifiers = JSON.parse(content);
+                    } else if (item.name === "itemCategory.json") {
+                        itemCategory = JSON.parse(content);
+                    } else if (item.name === "mapChatItems.json") {
+                        mapChatItems = JSON.parse(content);
+                    }
+                } else {
+                    alert(`${item.name} is already up-to-date.`);
+                    dateElement.textContent = `Last updated: ${new Date(localDate).toLocaleString()}`;
+                }
+            } catch (error) {
+                console.error(error);
+                alert(`Could not fetch update info for ${item.name}`);
+                dateElement.textContent = localDate ? `Last updated: ${new Date(localDate).toLocaleString()}` : "Last updated: N/A";
+            } finally {
+                // Button wieder aktivieren
+                updateButton.disabled = false;
+            }
+        });
+    }
+}
+
 // Funktion, die den Rest des Codes initialisiert
 async function initializeApp() {
     try {
@@ -1562,6 +1704,11 @@ async function initializeApp() {
 
                 await initializeExtensionSettingsButton();
                 console.log('initializeExtensionSettingsButton completed.');
+
+                /*
+                await initializeUpdate();
+                console.log('initializeUpdate completed.');
+                */
 
                 const settings = await getExtensionSettings();
                 if (settings.alphaFeatures) {

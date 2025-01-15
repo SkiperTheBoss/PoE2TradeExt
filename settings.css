@@ -26,6 +26,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 1px solid rgb(76, 76, 125);
     z-index: 1000; /* Über dem Overlay */
+    min-height: 880px;
+    min-width: 600px;
+
+    display: flex;
+    flex-direction: column; /* Flexbox für Modal-Inhalt */
 }
 
 #extension-settings-content button {
@@ -37,6 +42,10 @@
     cursor: pointer;
 }
 
+#extension-settings-content button:hover {
+    background-color: #133d62;
+}
+
 #extension-settings-content label {
     color: #e9cf9f;
 }
@@ -46,23 +55,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
-}
-
-/* Label und Checkbox in einer Zeile */
-#modal-body > div > div {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Abstand zwischen Checkbox/Label und Slider */
-    min-height: 30px;
+    margin-bottom: 10px;
 }
 
 /* Modal Footer Styling */
 #modal-footer {
-    margin-top: 5px;
     display: flex;
     justify-content: flex-end; /* Buttons nach rechts ausrichten */
     gap: 10px; /* Abstand zwischen den Buttons */
+    margin-top: auto; /* Schiebt den Footer an das Ende */
 }
 
 /* Close Button Styling */
@@ -82,38 +83,51 @@ input:disabled {
     cursor: not-allowed;
 }
 
-/* Slider neben Checkbox rechts ausrichten */
-.toggle-options {
-    color: #e9cf9f;
-    display: inline-flex;
-    height: 20px;
-    margin-left: auto; /* Automatisches Einrücken nach rechts */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    align-items: center;
+.import-button {
+    font-family: inherit;
+    font-size: 13px;
+    height: 34px;
+    padding: 5px 10px;
+    background-color: #0f304d;
+    color: #e2e2e2;
+    border: 1px solid #4c4c7d;
+    cursor: pointer;
 }
 
-/* Styling der einzelnen Optionen */
+.import-button:hover {
+    background-color: #133d62;
+}
+
+/* Optionen rechtsbündig */
+.toggle-options {
+    display: flex; /* Flexbox für die Buttons */
+    /* justify-content: flex-end; */ /* Buttons nach rechts */
+    align-items: center; /* Vertikal zentriert */
+    /* gap: 5px; */
+    border: 1px solid #ccc; /* Rahmen für den Container */
+    min-width: 200px; /* Mindestbreite, um Platz für die Buttons zu sichern */
+    height: 30px; /* Höhe für einheitliches Layout */
+    padding: 0;
+}
+
+/* Einzelne Optionen */
 .toggle-options .option {
-    padding: 5px 10px;
+    flex: 1; /* Alle Optionen gleich breit */
+    text-align: center; /* Text zentriert */
+    padding: 5px 0;
     cursor: pointer;
-    background-color: rgba(45, 49, 54, .3);
+    background-color: rgba(45, 49, 54, .3); /* Hintergrundfarbe */
     border-right: 1px solid #ccc;
-    user-select: none;
-    text-align: center;
-    flex: 1;
 }
 
 .toggle-options .option:last-child {
     border-right: none;
 }
 
-/* Styling für aktive Option */
+/* Aktive Option */
 .toggle-options .option.active {
     background-color: #724708;
     color: white;
-    font-size: inherit; /* Sicherstellen, dass die Schriftgröße nicht verändert wird */
 }
 
 /* Verhindere Änderungen bei Fokus */
@@ -124,4 +138,198 @@ input:disabled {
 /* Allgemein: Gleiche Schriftgröße für alle Optionen */
 .toggle-options .option {
     font-size: inherit; /* Schriftgröße übernehmen */
+}
+
+/* Hover-Effekt */
+.toggle-options .option:hover {
+    background-color: #133d62;
+    color: white;
+}
+
+/* Tabs Navigation */
+#tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+#tabs .tab {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #5a3806;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#tabs button {
+    background-color: #5a3806;
+    border-color: #8a5609;
+}
+
+#tabs button:hover {
+    background-color: #724708;
+}
+
+#tabs .tab.active {
+    background-color: #724708;
+    color: white;
+}
+
+/* Tabs Content */
+#tabs-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Sub-Tabs Navigation */
+.sub-tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.sub-tabs .sub-tab {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #0f304d;
+    /* border-radius: 5px 5px 0 0; */
+}
+
+.sub-tabs .sub-tab:hover {
+    background-color: #133d62 !important;
+}
+
+.sub-tabs .sub-tab.active {
+    background-color: #133d62 !important;
+    color: white;
+}
+
+/* Sub-Tabs Content */
+#sub-tabs-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-tab-content {
+    display: none;
+}
+
+.sub-tab-content.active {
+    display: block;
+}
+
+/* Container für Checkbox, Label und Optionen */
+.sub-tab-content > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Checkbox + Label links, Optionen rechts */
+    gap: 10px;
+    width: 100%; /* Nimmt die gesamte Breite ein */
+    /* padding: 5px 0; */ /* Optional: Vertikaler Abstand */
+    height: 36px;
+}
+
+/* Checkbox und Label */
+.sub-tab-content > div > label {
+    flex: 1 0 auto; /* Fixierte Breite für das Label */
+    color: #e9cf9f; /* Farbe wie bisher */
+    margin-right: 10px; /* Abstand zur Checkbox */
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+}
+
+/* Update Tab Styling */
+#update-list {
+    /* display: flex; */
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.update-item {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(45, 49, 54, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.update-name {
+    color: #e9cf9f;
+    font-size: 14px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.update-button {
+    padding: 5px 10px;
+    background-color: #724708;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.update-date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.update-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.update-table th,
+.update-table td {
+    /* border: 1px solid #ccc; */
+    padding: 8px;
+    text-align: left;
+}
+
+.update-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.update-table td .update-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.update-table td .update-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.update-table .loading-indicator {
+    font-style: italic;
+    color: #999;
 }

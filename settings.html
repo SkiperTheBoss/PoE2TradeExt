@@ -5,119 +5,150 @@
             <h1>Extension Settings</h1>
             <button id="close-button" title="Close">✖</button>
         </div>
-        <div id="modal-body">
-            <div>
-                <h4>Set Type Filters automatically</h4>
-                <div>
-                    <input class="toggle-btn" type="checkbox" id="filter-item-category" />
-                    <label for="filter-item-category">Item Category</label>
+        <!-- Tabs Navigation -->
+        <div id="tabs">
+            <button class="tab active" data-tab="general-tab">General</button>
+            <button class="tab" data-tab="update-tab">Update</button>
+        </div>
+        <!-- Tabs Content -->
+        <div id="tabs-content">
+            <!-- General Tab -->
+            <div id="general-tab" class="tab-content active">
+                <!-- Unter-Tabs Navigation -->
+                <div class="sub-tabs">
+                    <button class="sub-tab active" data-sub-tab="type-filters-tab">Type Filters</button>
+                    <button class="sub-tab" data-sub-tab="equipment-filters-tab">Equipment Filters</button>
+                    <button class="sub-tab" data-sub-tab="requirement-filters-tab">Requirement Filters</button>
+                    <button class="sub-tab" data-sub-tab="trade-filters-tab">Trade Filters</button>
+                    <button class="sub-tab" data-sub-tab="stat-filters-tab">Stat Filters</button>
+                    <button class="sub-tab" data-sub-tab="more-settings-tab">More Settings</button>
                 </div>
-                <div>
-                    <input type="checkbox" id="filter-item-rarity" />
-                    <label for="filter-item-rarity">Item Rarity</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-item-level" />
-                    <label for="filter-item-level">Item Level</label>
-                    <div class="toggle-options" id="toggle-item-level">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
+                <!-- Unter-Tabs Content -->
+                <div id="sub-tabs-content">
+                    <!-- Type Filters -->
+                    <div id="type-filters-tab" class="sub-tab-content active">
+                        <h4>Set Type Filters automatically</h4>
+                        <div>
+                            <input class="toggle-btn" type="checkbox" id="filter-item-category" />
+                            <label for="filter-item-category">Item Category</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="filter-item-rarity" />
+                            <label for="filter-item-rarity">Item Rarity</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="filter-item-level" />
+                            <label for="filter-item-level">Item Level</label>
+                            <div class="toggle-options" id="toggle-item-level">
+                                <span data-value="min" class="option active">Min</span>
+                                <span data-value="minmax" class="option">Min/Max</span>
+                                <span data-value="max" class="option">Max</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="filter-item-quality" />
+                            <label for="filter-item-quality">Item Quality</label>
+                            <div class="toggle-options" id="toggle-item-quality">
+                                <span data-value="min" class="option active">Min</span>
+                                <span data-value="minmax" class="option">Min/Max</span>
+                                <span data-value="max" class="option">Max</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-item-quality" />
-                    <label for="filter-item-quality">Item Quality</label>
-                    <div class="toggle-options" id="toggle-item-quality">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
+                    <!-- Equipment Filters -->
+                    <div id="equipment-filters-tab" class="sub-tab-content">
+                        <h4>Set Equipment Filters automatically</h4>
+                        <div>
+                            <input type="checkbox" id="filter-equipment-block" />
+                            <label for="filter-equipment-block">Block</label>
+                            <div class="toggle-options" id="toggle-equipment-block">
+                                <span data-value="min" class="option active">Min</span>
+                                <span data-value="minmax" class="option">Min/Max</span>
+                                <span data-value="max" class="option">Max</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Requirement Filters -->
+                    <div id="requirement-filters-tab" class="sub-tab-content">
+                        <h4>Set Requirements automatically</h4>
+                        <div>
+                            <input type="checkbox" id="filter-requirements-level" />
+                            <label for="filter-requirements-level">Level</label>
+                            <div class="toggle-options" id="toggle-requirements-level">
+                                <span data-value="min" class="option active">Min</span>
+                                <span data-value="minmax" class="option">Min/Max</span>
+                                <span data-value="max" class="option">Max</span>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="filter-requirements-str" />
+                            <label for="filter-requirements-str">Strength</label>
+                            <div class="toggle-options" id="toggle-requirements-str">
+                                <span data-value="min" class="option active">Min</span>
+                                <span data-value="minmax" class="option">Min/Max</span>
+                                <span data-value="max" class="option">Max</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Trade Filters -->
+                    <div id="trade-filters-tab" class="sub-tab-content">
+                        <h4>Set Trade Filters automatically</h4>
+                        <input type="checkbox" id="auto-seller" />
+                        <label for="auto-seller">Set Seller Account automatically</label>
+                        <input type="text" id="seller-account" class="form-control text" placeholder="Enter account name..." disabled />
+                    </div>
+                    <!-- Stat Filters -->
+                    <div id="stat-filters-tab" class="sub-tab-content">
+                        <h4>Set Stat Filters automatically</h4>
+                        <div>
+                            <input type="checkbox" id="filter-stat-default" />
+                            <label for="filter-stat-default">Stat</label>
+                            <div class="toggle-options" id="toggle-stat-default">
+                                <span data-value="min" class="option active">Min</span>
+                                <span data-value="minmax" class="option">Min/Max</span>
+                                <span data-value="max" class="option">Max</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stat Filters -->
+                    <div id="more-settings-tab" class="sub-tab-content">
+                        <h4>More Settings</h4>
+                        <div>
+                            <input type="checkbox" id="search-extension" />
+                            <label for="search-extension">Search automatically</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="extensionDebugMode" />
+                            <label for="extensionDebugMode">Debug</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="alphaFeatures" />
+                            <label for="alphaFeatures">Alpha Features</label>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <h4>Set Equipment Filters automatically</h4>
-                <div>
-                    <input type="checkbox" id="filter-equipment-block" />
-                    <label for="filter-equipment-block">Block</label>
-                    <div class="toggle-options" id="toggle-equipment-block">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4>Set Requirements automatically</h4>
-                <div>
-                    <input type="checkbox" id="filter-requirements-level" />
-                    <label for="filter-requirements-level">Level</label>
-                    <div class="toggle-options" id="toggle-requirements-level">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
-                    </div>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-requirements-str" />
-                    <label for="filter-requirements-str">Strength</label>
-                    <div class="toggle-options" id="toggle-requirements-str">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
-                    </div>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-requirements-dex" />
-                    <label for="filter-requirements-dex">Dexterity</label>
-                    <div class="toggle-options" id="toggle-requirements-dex">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
-                    </div>
-                </div>
-                <div>
-                    <input type="checkbox" id="filter-requirements-int" />
-                    <label for="filter-requirements-int">Intelligence</label>
-                    <div class="toggle-options" id="toggle-requirements-int">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4>Set Trade Filters automatically</h4>
-                <input type="checkbox" id="auto-seller" />
-                <label for="auto-seller">Set Seller Account automatically</label>
-                <input type="text" id="seller-account" class="form-control text" placeholder="Enter account name..." disabled />
-            </div>
-            <div>
-                <h4>Set Stat Filters automatically</h4>
-                <div>
-                    <input type="checkbox" id="filter-stat-default" />
-                    <label for="filter-stat-default">Stat</label>
-                    <div class="toggle-options" id="toggle-stat-default">
-                        <span data-value="min" class="option active">Min</span>
-                        <span data-value="minmax" class="option">Min/Max</span>
-                        <span data-value="max" class="option">Max</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4>More Settings</h4>
-                <div>
-                    <input type="checkbox" id="search-extension" />
-                    <label for="search-extension">Search automatically</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="extensionDebugMode" />
-                    <label for="extensionDebugMode">Debug</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="alphaFeatures" />
-                    <label for="alphaFeatures">Alpha Features</label>
-                </div>
+            <!-- Update Tab -->
+            <div id="update-tab" class="tab-content">
+                <table id="update-list" class="update-table">
+                    <tbody>
+                        <tr class="update-item" data-name="modifiers.json">
+                            <td class="update-name">modifiers.json</td>
+                            <td class="update-date">Last updated: N/A</td>
+                            <td><button class="update-button">Update</button></td>
+                        </tr>
+                        <tr class="update-item" data-name="itemCategory.json">
+                            <td class="update-name">itemCategory.json</td>
+                            <td class="update-date">Last updated: N/A</td>
+                            <td><button class="update-button">Update</button></td>
+                        </tr>
+                        <tr class="update-item" data-name="mapChatItems.json">
+                            <td class="update-name">mapChatItems.json</td>
+                            <td class="update-date">Last updated: N/A</td>
+                            <td><button class="update-button">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div id="modal-footer">
