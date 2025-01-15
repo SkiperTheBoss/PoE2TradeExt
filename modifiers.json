@@ -654,5 +654,9 @@
     "Freeze as though dealing Cold damage equal to #% of your maximum Mana when Hit":
     {},
     "Trigger Ember Fusillade Skill on casting a Spell":
+    {},
+    "# to # Fire Thorns damage":
+    {},
+    "#% of Physical Damage taken as Fire Damage":
     {}
 }
