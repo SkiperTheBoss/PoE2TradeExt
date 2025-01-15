@@ -22,7 +22,7 @@
     "Presence": ["Presence"],
     "Ignited": ["Ignite|Ignited"],
     "Ignite": ["Ignite", "Ignite|Ignite"],
-    "Fire": ["Fire"],
+    "Fire": ["Fire", "Fire|Fire"],
     "Cold": ["Cold"],
     "Poison": ["Poison", "Poison|Poison"],
     "Lightning": ["Lightning"],
