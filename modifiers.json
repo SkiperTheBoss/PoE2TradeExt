@@ -658,5 +658,7 @@
     "# to # Fire Thorns damage":
     {},
     "#% of Physical Damage taken as Fire Damage":
+    {},
+    "#% of Damage is taken from Mana before Life":
     {}
 }

@@ -27,7 +27,7 @@
     "Poison": ["Poison", "Poison|Poison"],
     "Lightning": ["Lightning"],
     "Chill": ["Chill", "Chill|Chill"],
-    "Shock": ["Shock"],
+    "Shock": ["Shock", "Shock|Shock"],
     "Light Radius": ["LightRadius|Light Radius"],
     "Energy Shield": ["EnergyShield|Energy Shield"],
     "Physical": ["Physical", "Physical|Physical"],
