@@ -117,6 +117,11 @@
     {},
     "#% increased Life Recovery from Flasks":
     {},
+    "#% increased Life Recovery from Flasks (implicit)":
+    {
+        "mapped": "#% increased Life Recovery from Flasks",
+        "additional": "implicit"
+    },
     "#% chance to Poison on Hit":
     {},
     "#% increased Damage with Crossbows":
@@ -660,5 +665,17 @@
     "#% of Physical Damage taken as Fire Damage":
     {},
     "#% of Damage is taken from Mana before Life":
+    {},
+    "#% increased Flask Charges used":
+    {
+        "mapped": "#% reduced Flask Charges used"
+    },
+    "Gain #% of Maximum Mana as Extra Maximum Energy Shield":
+    {},
+    "Attacks Chain # additional times":
+    {
+        "mapped": "Attacks Chain an additional time"
+    },
+    "Trigger Spark Skill on killing a Shocked Enemy":
     {}
 }
