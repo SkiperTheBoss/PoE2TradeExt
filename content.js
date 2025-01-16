@@ -676,6 +676,10 @@ async function processStatLines(statLines, itemType) {
                 if (stat.includes("increased") && mapped.includes("reduced")) {
                     minValue = `-${Math.abs(minValue)}`;
                 }
+
+                if (stat.includes("less") && mapped.includes("more")) {
+                    minValue = `-${Math.abs(minValue)}`;
+                }
             }
 
             let resolvedAdditional = additional || null;

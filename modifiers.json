@@ -640,7 +640,7 @@
     {},
     "Culling Strike against Frozen Enemies":
     {},
-    "#% of Melee Physical Damage taken reflected to Attacker": 
+    "#% of Melee Physical Damage taken reflected to Attacker":
     {},
     "You have no Life Regeneration":
     {},
@@ -677,5 +677,19 @@
         "mapped": "Attacks Chain an additional time"
     },
     "Trigger Spark Skill on killing a Shocked Enemy":
+    {},
+    "#% increased Arrow Speed":
+    {},
+    "#% less Attack Damage":
+    {
+        "mapped": "#% more Attack Damage"
+    },
+    "Thorns damage is triggered by all Hits":
+    {},
+    "#% increased Armour and Energy Shield":
+    {},
+    "You take #% of damage from Blocked Hits":
+    {},
+    "Enemies are Culled on Block":
     {}
 }
