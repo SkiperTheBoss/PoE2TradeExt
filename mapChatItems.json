@@ -1,6 +1,6 @@
 {
     "Armour": ["Armour", "Armour|Armour"],
-    "Evasion": ["Evasion"],
+    "Evasion": ["Evasion", "Evasion|Evasion"],
     "Critical Hit": ["Critical|Critical Hit"],
     "Critical Hits": ["Critical|Critical Hits"],
     "Critical Hit Chance": ["Critical|Critical Hit Chance"],
@@ -25,7 +25,7 @@
     "Fire": ["Fire", "Fire|Fire"],
     "Cold": ["Cold"],
     "Poison": ["Poison", "Poison|Poison"],
-    "Lightning": ["Lightning"],
+    "Lightning": ["Lightning", "Lightning|Lightning"],
     "Chill": ["Chill", "Chill|Chill"],
     "Shock": ["Shock", "Shock|Shock"],
     "Light Radius": ["LightRadius|Light Radius"],
@@ -40,12 +40,13 @@
     "Heavy Stunned": ["HeavyStun|Heavy Stunned"],
     "Converted": ["StatConversion|Converted", "Conversion|Converted"],
     "Elemental Damage": ["ElementalDamage|Elemental Damage"],
+    "Elemental": ["ElementalDamage|Elemental"],
     "Giant's Blood": ["GiantsBlood|Giant's Blood"],
     "Charges": ["Charges"],
     "Allies": ["Allies"],
     "Skill Speed": ["SkillSpeed|Skill Speed"],
     "Totem": ["Totem", "Totem|Totem"],
-    "Minion": ["Minion"],
+    "Minion": ["Minion", "Minion|Minion"],
     "Minions": ["Minion|Minions"],
     "Stun Threshold": ["StunThreshold|Stun Threshold"],
     "Warcries": ["Warcry|Warcries"],
@@ -103,5 +104,6 @@
     "Spirit": ["Spirit|Spirit"],
     "Chaos Resistance": ["Resistances|Chaos Resistance"],
     "Low Life": ["LowLife|Low Life"],
-    "Lose": ["LifeLoss|Lose"]
+    "Lose": ["LifeLoss|Lose"],
+    "Attribute": ["Attributes|Attribute"]
 }

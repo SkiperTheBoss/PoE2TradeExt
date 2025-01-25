@@ -209,7 +209,13 @@
     "#% increased Magnitude of Ailments you inflict":
     {},
     "#% increased Attack Speed":
-    {},
+    {
+        "optionIndex":
+        {
+            "Gloves": 2,
+            "default": 1
+        }
+    },
     "#% increased Attack Speed with Quarterstaves":
     {},
     "#% increased Projectile Damage":
@@ -691,5 +697,58 @@
     "You take #% of damage from Blocked Hits":
     {},
     "Enemies are Culled on Block":
+    {},
+    "Thorns damage is triggered by all Hits":
+    {},
+    "Gain #% of Damage as Extra Fire Damage":
+    {},
+    "# to Level of all Lightning Spell Skills":
+    {},
+    "# Physical Damage taken on Minion Death":
+    {},
+    "#% increased Cast Speed (implicit)":
+    {
+        "mapped": "#% increased Cast Speed",
+        "additional": "implicit"
+    },
+    "#% increased Movement Speed when on Full Life":
+    {},
+    "#% increased Evasion Rating when on Full Life":
+    {},
+    "Trigger Greater Lightning Bolt Skill on Critical Hit":
+    {},
+    "Critical Hits Ignore Enemy Monster Lightning Resistance":
+    {},
+    "#% increased Area of Effect for Attacks per 5 Intelligence":
+    {
+        "replace": [1]
+    },
+    "#% increased Attack Speed per 5 Dexterity":
+    {
+        "replace": [1]
+    },
+    "#% increased Weapon Damage per 5 Strength":
+    {
+        "replace": [1]
+    },
+    "#% increased Range (implicit)":
+    {
+        "mapped": "#% increased Range",
+        "additional": "implicit"
+    },
+    "Giant's Blood":
+    {},
+    "#% to Critical Damage Bonus":
+    {},
+    "Increases and Reductions to Minion Attack Speed also affect you":
+    {},
+    "# to Level of all Minion Skills":
+    {},
+    "#% to Chaos Resistance (implicit)":
+    {
+        "mapped": "#% to Chaos Resistance",
+        "additional": "implicit"
+    },
+    "Adds # to # Lightning damage to Attacks":
     {}
 }
